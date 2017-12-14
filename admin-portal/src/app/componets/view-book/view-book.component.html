@@ -1,0 +1,66 @@
+<div class="container">	
+	<div style="margin-top: 20px;">
+		<a routerLink="/bookList"><i class="fa fa-long-arrow-left"></i> Go Back</a>
+		<span> / </span>
+		<a (click)="onSelect(book)" style="cursor: pointer">Edit</a>
+	</div>
+	<mat-grid-list cols="9" rowHeight="100px">
+		<mat-grid-tile [colspan]="3" [rowspan]="5">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<img [src]="'http://localhost:8181/image/book/'+book.id+'.png'" class="responsive-img" />
+				</div>
+			</div>
+		</mat-grid-tile>
+		<mat-grid-tile [colspan]="6">
+			<h3>{{book.title}}</h3>
+		</mat-grid-tile>
+		<mat-grid-tile [colspan]="3" [rowspan]="4">
+			<mat-list>
+				<mat-list>
+					<p><strong>Author: </strong>{{book.author}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Publisher: </strong>{{book.publisher}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Publication Date: </strong>{{book.publicationDate}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Language: </strong>{{book.language}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Category: </strong>{{book.category}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Pages: </strong>{{book.numberOfPages}}</p>
+				</mat-list>
+			</mat-list>
+		</mat-grid-tile>
+		<mat-grid-tile [colspan]="3" [rowspan]="4">
+			<mat-list>
+				<mat-list>
+					<p><strong>Format: </strong>{{book.format}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>ISBN: </strong>{{book.isbn}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Shipping Weight: </strong>{{book.shippingWeight}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>List Price: </strong>{{book.listPrice}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Our Price: </strong>{{book.ourPrice}}</p>
+				</mat-list>
+				<mat-list>
+					<p><strong>Number in Stock: </strong>{{book.inStockNumber}}</p>
+				</mat-list>
+			</mat-list>
+		</mat-grid-tile>
+		<mat-grid-tile [colspan]="6">
+			<p><strong>Description: </strong>{{book.description}}</p>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>

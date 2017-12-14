@@ -1,0 +1,7 @@
+<mat-toolbar class = "mat-primary">
+  <h3>Admin Portal</h3>
+  <span class="example-spacer"></span>
+  <span [hidden]="!loggedIn"><button mat-button routerLink = "/bookList">View</button></span>
+  <span [hidden]="!loggedIn"><button mat-button routerLink = "/addNewBook">Add</button></span>
+  <span [hidden]="!loggedIn"><button mat-button (click) = "logout()">log out</button></span>
+</mat-toolbar>
